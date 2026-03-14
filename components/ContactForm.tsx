@@ -40,11 +40,8 @@ export default function ContactForm() {
           </svg>
         </div>
         <h3 className="text-2xl font-bold font-['Space_Grotesk'] mb-4">Message Sent!</h3>
-        <p className="text-gray-400 mb-2">
+        <p className="text-gray-400 mb-6">
           We&apos;ll get back to you within 24 hours.
-        </p>
-        <p className="text-sm text-gray-500">
-          Sent to: hello@gassafebot.co.uk
         </p>
         <button
           onClick={() => setSubmitted(false)}
@@ -123,10 +120,7 @@ export default function ContactForm() {
         />
       </div>
 
-      <div className="flex items-center justify-between">
-        <p className="text-sm text-gray-500">
-          All messages go to: <span className="text-[#00D4FF]">hello@gassafebot.co.uk</span>
-        </p>
+      <div className="flex items-center justify-end">
         <button
           type="submit"
           disabled={isSubmitting}

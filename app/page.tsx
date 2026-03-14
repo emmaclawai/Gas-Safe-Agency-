@@ -145,9 +145,6 @@ export default function Home() {
               <span className="text-[#8B5CF6]">Bot</span>
             </Link>
             <p className="text-sm text-gray-500">
-              hello@gassafebot.co.uk
-            </p>
-            <p className="text-sm text-gray-500">
               © {new Date().getFullYear()} GasSafeBot
             </p>
           </div>

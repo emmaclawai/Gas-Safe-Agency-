@@ -31,26 +31,7 @@ export default function ContactPage() {
 
       {/* Contact Section */}
       <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Email Info */}
-          <div className="mb-12 text-center">
-            <a
-              href="mailto:hello@gassafebot.co.uk"
-              className="inline-flex items-center space-x-3 p-6 rounded-xl bg-[#111118] border border-[#1E1E2E] hover:border-[#00D4FF]/30 transition-colors"
-            >
-              <div className="w-12 h-12 rounded-lg bg-[#00D4FF]/10 flex items-center justify-center text-[#00D4FF]">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="text-left">
-                <p className="text-sm text-gray-400">Email us at</p>
-                <p className="text-lg font-semibold text-[#00D4FF]">hello@gassafebot.co.uk</p>
-              </div>
-            </a>
-          </div>
-
-          {/* Contact Form */}
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-8 rounded-2xl bg-[#111118] border border-[#1E1E2E]">
             <h2 className="text-2xl font-bold font-['Space_Grotesk'] mb-6">
               Send us a Message
@@ -69,7 +50,7 @@ export default function ContactPage() {
               <span className="text-[#8B5CF6]">Bot</span>
             </Link>
             <p className="text-sm text-gray-500">
-              © {new Date().getFullYear()} GasSafeBot. All rights reserved.
+              © {new Date().getFullYear()} GasSafeBot
             </p>
           </div>
         </div>
