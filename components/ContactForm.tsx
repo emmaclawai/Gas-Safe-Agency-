@@ -5,8 +5,8 @@ import { useState } from "react";
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
-    company: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,7 +21,7 @@ export default function ContactForm() {
     
     setIsSubmitting(false);
     setSubmitted(true);
-    setFormData({ name: "", company: "", email: "", message: "" });
+    setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -39,9 +39,9 @@ export default function ContactForm() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-2xl font-bold font-['Space_Grotesk'] mb-4">Message Sent!</h3>
+        <h3 className="text-2xl font-bold font-['Space_Grotesk'] mb-4">You're on the list!</h3>
         <p className="text-gray-400 mb-6">
-          We&apos;ll get back to you within 24 hours.
+          We'll be in touch within 24 hours to get you set up with Emma.
         </p>
         <button
           onClick={() => setSubmitted(false)}
@@ -73,17 +73,18 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-            Company Name
+          <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+            Phone Number *
           </label>
           <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            value={formData.phone}
             onChange={handleChange}
             className="w-full px-4 py-3 bg-[#0A0A0F] border border-[#1E1E2E] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#00D4FF] transition-colors"
-            placeholder="Smith Heating Ltd"
+            placeholder="07700 900123"
           />
         </div>
       </div>
@@ -106,17 +107,16 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-          Your Message *
+          Message
         </label>
         <textarea
           id="message"
           name="message"
-          required
-          rows={5}
+          rows={4}
           value={formData.message}
           onChange={handleChange}
           className="w-full px-4 py-3 bg-[#0A0A0F] border border-[#1E1E2E] rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-[#00D4FF] transition-colors resize-none"
-          placeholder="Tell us about your project..."
+          placeholder="Tell us about your business..."
         />
       </div>
 
@@ -135,7 +135,7 @@ export default function ContactForm() {
               Sending...
             </span>
           ) : (
-            "Send Message"
+            "Get Early Access"
           )}
         </button>
       </div>

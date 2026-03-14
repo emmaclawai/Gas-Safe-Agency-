@@ -13,12 +13,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "GasSafeBot | Precision Marketing Partners",
-  description: "Where Strategy Meets Systematic Execution. Built for Gas Safe Engineers. Premium websites, SEO, and AI-powered customer service.",
-  keywords: "Gas Safe, engineers, marketing, websites, SEO, AI customer service, heating engineers",
+  title: "GasSafeBot | Emma — 24/7 AI Receptionist for Gas Engineers",
+  description: "Never miss a gas job again. Emma is your AI receptionist who answers every call, books jobs into your calendar, and handles gas emergencies 24/7. Built exclusively for Gas Safe engineers.",
+  keywords: "Gas Safe, engineers, AI receptionist, Emma, answering service, gas engineer, boiler repair, emergency calls, 24/7 answering",
   openGraph: {
-    title: "GasSafeBot | Precision Marketing Partners",
-    description: "Where Strategy Meets Systematic Execution. Built for Gas Safe Engineers.",
+    title: "GasSafeBot | Emma — 24/7 AI Receptionist for Gas Engineers",
+    description: "Never miss a gas job again. Emma answers every call, books jobs into your calendar, and handles gas emergencies 24/7.",
     type: "website",
   },
 };

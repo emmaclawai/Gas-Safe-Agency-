@@ -7,8 +7,8 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/contact", label: "Contact" },
+    { href: "#features", label: "Features" },
+    { href: "#contact", label: "Get Started" },
   ];
 
   return (
@@ -26,20 +26,20 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
                 className="text-gray-300 hover:text-[#00D4FF] transition-colors font-medium"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
-            <Link
-              href="/contact"
+            <a
+              href="#contact"
               className="btn-primary text-sm"
             >
-              Start Your Project
-            </Link>
+              Get Early Access
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -77,22 +77,22 @@ export default function Navbar() {
           <div className="md:hidden py-4 border-t border-[#1E1E2E]">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
                   className="text-gray-300 hover:text-[#00D4FF] transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
-              <Link
-                href="/contact"
+              <a
+                href="#contact"
                 className="btn-primary text-sm text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Start Your Project
-              </Link>
+                Get Early Access
+              </a>
             </div>
           </div>
         )}
